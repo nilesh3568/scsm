@@ -13,6 +13,20 @@
     --primary-color:#9C2007;
 }
 
+/* ================= LOADER ================= */
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
 /* ================= HEADER ================= */
 .top-header{
     text-align:center;
@@ -65,6 +79,13 @@
 
 .navbar-nav .nav-item:last-child{
     margin-right:0;
+}
+
+/* Center navbar on desktop */
+@media(min-width:992px){
+    .navbar .navbar-collapse{
+        justify-content: center;
+    }
 }
 
 /* Sticky Navbar */
@@ -150,10 +171,22 @@
         text-align:left !important;
     }
 }
+
+@media(max-width:768px){
+    .marquee-content a{
+        font-size:13px;
+        gap:20px;
+    }
+}
 </style>
 </head>
 
 <body>
+
+<!-- ================= LOADER ================= -->
+<div id="loader">
+    <img src="photos/logo.png" alt="Loading...">
+</div>
 
 <!-- ================= HEADER ================= -->
 <div class="top-header">
@@ -176,16 +209,38 @@
 
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav">
 
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                    About
-                </a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
                     <li><a class="dropdown-item" href="#">Management</a></li>
@@ -257,11 +312,13 @@ window.addEventListener("scroll", function(){
         document.body.classList.remove("nav-padding");
     }
 });
+
+// ================= HIDE LOADER AFTER PAGE LOAD =================
+window.addEventListener("load", function(){
+    const loader = document.getElementById("loader");
+    loader.style.display = "none";
+});
 </script>
 
 </body>
-
 </html>
-
-
-
