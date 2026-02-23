@@ -164,6 +164,38 @@ html, body{
     animation-play-state: paused;
 }
 
+
+
+
+/* Leadership Section */
+.leader-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    margin: 20px auto 10px;
+}
+
+.leader-card {
+    transition: 0.3s;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary-custom:hover {
+    background-color: #7a1705;
+    color: #fff;
+}
+
 @keyframes scroll-left{
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
@@ -300,6 +332,75 @@ html, body{
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<!-- ================= OUR LEADERSHIP SECTION ================= -->
+<section class="py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+
+    <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">
+      Our Leadership
+    </h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Leader 1 -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm leader-card h-100">
+          <img src="photos/bapu.jpg" alt="Leader"
+               class="leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Hon'ble Shri Shivajirao (Bapu) Nagawade</h5>
+            <p class="text-muted">Founder</p>
+            <p class="small">
+              Leading the institution with dedication and commitment towards academic excellence.
+            </p>
+            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm leader-card h-100">
+          <img src="photos/dada.jpg" alt="Leader"
+               class="leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Shri Rajendra (Dada) Nagawade</h5>
+            <p class="text-muted">President</p>
+            <p class="small">
+              Supporting academic administration and student development activities.
+            </p>
+            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leader 3 -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm leader-card h-100">
+          <img src="photos/vahini.jpg" alt="Leader"
+               class="leader-img">
+          <div class="card-body">
+            <h5 class="fw-bold">Mrs. Anuradha (Tai) Nagawade</h5>
+            <p class="text-muted">Secretary</p>
+            <p class="small">
+              Providing strategic direction and strengthening institutional growth.
+            </p>
+            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <!-- ================= FOOTER ================= -->
