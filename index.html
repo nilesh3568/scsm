@@ -8,9 +8,17 @@
 <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Font Awesome (Required for Footer Icons) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 <style>
 :root{
     --primary-color:#9C2007;
+}
+
+/* ===== FIX HORIZONTAL SCROLL ===== */
+html, body{
+    overflow-x:hidden;
 }
 
 /* ================= LOADER ================= */
@@ -72,7 +80,6 @@
     box-shadow:none;
 }
 
-/* Reduce space between tabs */
 .navbar-nav .nav-item{
     margin-right:15px;
 }
@@ -81,14 +88,12 @@
     margin-right:0;
 }
 
-/* Center navbar on desktop */
 @media(min-width:992px){
     .navbar .navbar-collapse{
-        justify-content: center;
+        justify-content:center;
     }
 }
 
-/* Sticky Navbar */
 .sticky-nav{
     position:fixed;
     top:0;
@@ -107,7 +112,6 @@
     object-fit:cover;
 }
 
-/* Bold Custom Arrows */
 .custom-arrow{
     font-size:40px;
     font-weight:bold;
@@ -115,20 +119,13 @@
     background:rgba(0,0,0,0.6);
     padding:10px 18px;
     border-radius:50%;
-    transition:0.3s;
 }
 
-.custom-arrow:hover{
-    background:rgba(0,0,0,0.9);
-}
-
-/* Adjust control width */
 .carousel-control-prev,
 .carousel-control-next{
     width:8%;
 }
 
-/* Indicator styling */
 .carousel-indicators button{
     background-color:#fff;
     width:12px;
@@ -147,6 +144,7 @@
     display:flex;
     align-items:center;
     overflow:hidden;
+    width:100%;
 }
 
 .marquee-content{
@@ -175,40 +173,23 @@
 @media(max-width:992px){
 
     .carousel-item img{
-        height:auto;
         object-fit:contain;
     }
 
-    .top-header h6{
-        font-size:13px;
-    }
+    .top-header h6{ font-size:13px; }
+    .top-header h3{ font-size:18px; }
+    .top-header p{ font-size:12px; }
 
-    .top-header h3{
-        font-size:18px;
-    }
+    .nav-padding{ padding-top:60px; }
 
-    .top-header p{
-        font-size:12px;
-    }
-
-    .nav-padding{
-        padding-top:60px;
-    }
-
-    /* Left align mobile menu */
-    .navbar-nav{
-        text-align:left !important;
-    }
+    .navbar-nav{ text-align:left !important; }
 }
 
 @media(max-width:768px){
-    .marquee-content a{
-        font-size:13px;
-        gap:20px;
-    }
+    .marquee-content{ gap:20px; }
+    .marquee-content a{ font-size:13px; }
 }
 
-/* Custom Hamburger Button */
 .custom-toggler {
     background-color: white;
     border-radius: 5px;
@@ -217,10 +198,8 @@
 
 .custom-toggler .navbar-toggler-icon {
     filter: invert(1);
-    color: var(--primary-color);
 }
 
-/* Optional: make X button visually smaller on mobile */
 #closeBtn {
     padding: 0.25rem 0.5rem;
 }
@@ -229,31 +208,29 @@
 
 <body>
 
-<!-- ================= LOADER ================= -->
+<!-- LOADER -->
 <div id="loader">
     <img src="photos/logo.PNG" alt="Loading...">
 </div>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <div class="top-header">
     <h6>Shri Chhatrapati Shivaji Shikshan Sanstha's</h6>
     <h3>Shri Chhatrapati Shivaji Mahavidyalaya</h3>
     <p>Shivajinagar, Shrigonda, Dist. Ahmednagar, Pin-413701</p>
 </div>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark position-relative">
   <div class="container d-flex align-items-center">
 
-    <!-- Hamburger LEFT -->
-    <button id="navbarToggle" class="navbar-toggler custom-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="navbarToggle" class="navbar-toggler custom-toggler me-2"
+        type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu Items LEFT -->
     <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav">
-
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
@@ -267,16 +244,13 @@
             <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Faculty</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-
         </ul>
     </div>
 
-    <!-- Online Admission RIGHT (flex item) -->
     <a href="#" class="btn text-white fw-bold px-3 ms-auto">
         Online Admission
     </a>
 
-    <!-- Close X Button (absolute inside navbar) -->
     <button id="closeBtn" class="btn text-white d-none position-absolute top-0 end-0 m-2">
         ✕
     </button>
@@ -284,50 +258,37 @@
   </div>
 </nav>
 
-<!-- ================= SLIDER ================= -->
-<div id="collegeSlider" class="carousel slide carousel-fade mt-2" data-bs-ride="carousel" data-bs-interval="3000">
-  
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="3"></button>
-    </div>
+<!-- SLIDER -->
+<div id="collegeSlider" class="carousel slide carousel-fade mt-2"
+     data-bs-ride="carousel" data-bs-interval="3000">
 
-    <!-- Slides -->
     <div class="carousel-inner">
-
         <div class="carousel-item active">
-            <img src="photos/1.JPG" class="d-block w-100" alt="Slide 1">
+            <img src="photos/1.JPG" class="d-block w-100">
         </div>
-
         <div class="carousel-item">
-            <img src="photos/2.JPG" class="d-block w-100" alt="Slide 2">
+            <img src="photos/2.JPG" class="d-block w-100">
         </div>
-
         <div class="carousel-item">
-            <img src="photos/3.JPG" class="d-block w-100" alt="Slide 3">
+            <img src="photos/3.JPG" class="d-block w-100">
         </div>
-
         <div class="carousel-item">
-            <img src="photos/4.JPG" class="d-block w-100" alt="Slide 4">
+            <img src="photos/4.JPG" class="d-block w-100">
         </div>
-
     </div>
 
-    <!-- Custom Bold Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#collegeSlider" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#collegeSlider" data-bs-slide="prev">
         <span class="custom-arrow">&#10094;</span>
     </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#collegeSlider" data-bs-slide="next">
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#collegeSlider" data-bs-slide="next">
         <span class="custom-arrow">&#10095;</span>
     </button>
-
 </div>
 
-<!-- ================= NOTICE BAR ================= -->
+<!-- NOTICE BAR -->
 <div class="notice-bar mt-2">
     <div class="container marquee-wrapper">
         <div class="marquee-content">
@@ -340,10 +301,82 @@
     </div>
 </div>
 
+<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
+<footer class="text-dark" style="background-color:#fff; margin:0;">
+
+<!-- Section 1: Centered Text -->
+<section class="text-center p-4 mt-2"
+         style="background-color:var(--primary-color); color:white;">
+    Get connected with us on social networks:
+</section>
+
+<!-- Section 2: Footer Content -->
+<section class="mt-5">
+<div class="container">
+<div class="row text-center text-md-start">
+
+<!-- Column 1 -->
+<div class="col-md-3 mb-4">
+<h6 class="fw-bold" style="color:var(--primary-color);">SCSM Shrigonda</h6>
+<p>Committed to academic excellence and student development.</p>
+</div>
+
+<!-- Column 2 -->
+<div class="col-md-3 mb-4">
+<h6 class="fw-bold" style="color:var(--primary-color);">Courses</h6>
+<p><a href="#" class="text-dark">B.Sc</a></p>
+<p><a href="#" class="text-dark">M.Sc</a></p>
+<p><a href="#" class="text-dark">B.Com</a></p>
+<p><a href="#" class="text-dark">M.Com</a></p>
+</div>
+
+<!-- Column 3 -->
+<div class="col-md-3 mb-4">
+<h6 class="fw-bold" style="color:var(--primary-color);">Useful Links</h6>
+<p><a href="#" class="text-dark">Admissions</a></p>
+<p><a href="#" class="text-dark">Faculty</a></p>
+<p><a href="#" class="text-dark">Library</a></p>
+<p><a href="#" class="text-dark">Examination</a></p>
+</div>
+
+<!-- Column 4 (Contact + Social Icons Added Here) -->
+<div class="col-md-3 mb-4">
+<h6 class="fw-bold" style="color:var(--primary-color);">Contact</h6>
+<p>Shivajinagar, Shrigonda, Dist. Ahilyanagar 413701</p>
+<p>info@scsmshrigonda.edu.in</p>
+<p>+91 234 567 890</p>
+
+<!-- Social Icons -->
+<div class="mt-3">
+    <a href="#" class="text-success fs-5 me-3">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" class="text-primary fs-5 me-3">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="text-danger fs-5">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Copyright -->
+<div class="text-center text-white p-3"
+     style="background-color:var(--primary-color);">
+© 2026 SCSM Shrigonda
+</div>
+
+</footer>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Sticky Navbar Script -->
 <script>
 const navbar = document.getElementById("mainNavbar");
 const headerHeight = document.querySelector(".top-header").offsetHeight;
@@ -358,158 +391,33 @@ window.addEventListener("scroll", function(){
     }
 });
 
-// ================= HIDE LOADER AFTER PAGE LOAD =================
 window.addEventListener("load", function(){
-    const loader = document.getElementById("loader");
-    loader.style.display = "none";
+    document.getElementById("loader").style.display = "none";
 });
-
-
-// 
-
 
 const toggleBtn = document.getElementById('navbarToggle');
 const closeBtn = document.getElementById('closeBtn');
 const menu = document.getElementById('menu');
 
-// When hamburger clicked
 toggleBtn.addEventListener('click', () => {
-    toggleBtn.classList.add('d-none'); // hide hamburger
-    closeBtn.classList.remove('d-none'); // show X
+    toggleBtn.classList.add('d-none');
+    closeBtn.classList.remove('d-none');
 });
 
-// When X clicked
 closeBtn.addEventListener('click', () => {
-    closeBtn.classList.add('d-none'); // hide X
-    toggleBtn.classList.remove('d-none'); // show hamburger
-    menu.classList.remove('show'); // collapse menu
+    closeBtn.classList.add('d-none');
+    toggleBtn.classList.remove('d-none');
+    menu.classList.remove('show');
+});
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth >= 992) {
+        toggleBtn.classList.remove('d-none');
+        closeBtn.classList.add('d-none');
+        menu.classList.remove('show');
+    }
 });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Full-width Footer -->
-<footer class="text-dark" style="background-color: #fff; margin:0;">
-
-  <!-- Section 1: Social Media -->
-  <section class="d-flex justify-content-between p-4 mt-2" style="background-color: var(--primary-color); color: white;">
-    <!-- Left -->
-    <div>
-      <span class="text-center">Get connected with us on social networks:</span>
-    </div>
-
-    <!-- Right -->
-    <div>
-      <a href="#" class="text-warning me-4"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-warning me-4"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="text-warning me-4"><i class="fab fa-google"></i></a>
-      <a href="#" class="text-warning me-4"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="text-warning me-4"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="text-warning me-4"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
-  <!-- End Section 1 -->
-
-  <!-- Section 2: Footer Content -->
-  <section class="mt-5">
-    <div class="row text-center text-md-start mx-0 px-3">
-
-      <!-- Column 1: College Info -->
-      <div class="col-md-3 col-lg-3 mb-4">
-        <h6 class="text-uppercase fw-bold" style="color:var(--primary-color);">SCSM Shrigonda</h6>
-        <hr class="mb-4 mt-0 d-inline-block" style="width: 60px; background-color: #7c4dff; height: 2px" />
-        <p>
-          Shri Chhatrapati Shivaji Mahavidyalaya, Shrigonda (SCSM Shrigonda) is committed to academic excellence and student development.
-        </p>
-      </div>
-
-      <!-- Column 2: Courses -->
-      <div class="col-md-3 col-lg-3 mb-4">
-        <h6 class="text-uppercase fw-bold" style="color:var(--primary-color);">Courses</h6>
-        <hr class="mb-4 mt-0 d-inline-block" style="width: 60px; background-color: #fff; height: 2px" />
-        <p><a href="#!" class="text-dark">B.Sc</a></p>
-        <p><a href="#!" class="text-dark">M.Sc</a></p>
-        <p><a href="#!" class="text-dark">B.Com</a></p>
-        <p><a href="#!" class="text-dark">M.Com</a></p>
-      </div>
-
-      <!-- Column 3: Useful Links -->
-      <div class="col-md-3 col-lg-3 mb-4">
-        <h6 class="text-uppercase fw-bold" style="color:var(--primary-color);">Useful Links</h6>
-        <hr class="mb-4 mt-0 d-inline-block" style="width: 60px; background-color: #7c4dff; height: 2px" />
-        <p><a href="#!" class="text-dark">Admissions</a></p>
-        <p><a href="#!" class="text-dark">Faculty</a></p>
-        <p><a href="#!" class="text-dark">Library</a></p>
-        <p><a href="#!" class="text-dark">Examination</a></p>
-      </div>
-
-      <!-- Column 4: Contact -->
-      <div class="col-md-3 col-lg-3 mb-4">
-        <h6 class="text-uppercase fw-bold" style="color: var(--primary-color);">Contact</h6>
-        <hr class="mb-4 mt-0 d-inline-block" style="width: 60px; color: var(--primary-color);; background-color: #7c4dff; height: 2px" />
-        <p><i class="fas fa-map-marker-alt me-2"></i> Shivajinagar, Shrigonda, Tel. Shrigonda, Dist. Ahilyanagar 413701</p>
-        <p><i class="fas fa-envelope me-2"></i> info@scsmshrigonda.edu.in</p>
-        <p><i class="fas fa-phone me-2"></i> +91 234 567 890</p>
-        <p><i class="fas fa-print me-2"></i> +91 234 567 891</p>
-      </div>
-
-    </div>
-  </section>
-  <!-- End Section 2 -->
-
-  <!-- Section 3: Optional Additional Info -->
-  <section class="text-center mt-4 mb-0">
-    <!-- Can add newsletter or extra links if needed -->
-  </section>
-  <!-- End Section 3 -->
-
-  <!-- Section 4: Copyright -->
-  <div class="text-center text-white  p-3" style="background-color: var(--primary-color);">
-    © 2026 SCSM Shrigonda
-  </div>
-  <!-- End Section 4 -->
-
-</footer>
-
 </body>
 </html>
-
-
