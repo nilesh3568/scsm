@@ -8,6 +8,9 @@
 <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
 <!-- Font Awesome (Required for Footer Icons) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
@@ -244,6 +247,12 @@
 #closeBtn {
     padding: 0.25rem 0.5rem;
 }
+
+
+
+.card-img-top:hover{
+    filter: contrast(120%);
+}
 </style>
 </head>
 
@@ -272,7 +281,7 @@
 
     <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="scsm1.html">Home</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
                 <ul class="dropdown-menu">
@@ -376,9 +385,8 @@
     <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">
       Our Leadership
     </h2>
+
     <p class="text-center text-dark mb-5 ">“Visionary leaders steering Shri Chhatrapati Shivaji Mahavidyalaya towards academic excellence and holistic growth.”</p>
-
-
 
     <div class="row g-4 justify-content-center">
 
@@ -388,7 +396,7 @@
           <img src="photos/bapu.jpg" alt="Leader"
                class="leader-img">
           <div class="card-body">
-            <h5 class="fw-bold">Hon'ble Shri Shivajirao (Bapu) Nagawade</h5>
+            <h5 class="fw-bold">Shri Shivajirao (Bapu) Nagawade</h5>
             <p class="text-muted">Founder</p>
             <p class="small">
               Leading the institution with dedication and commitment towards academic excellence.
@@ -430,6 +438,213 @@
         </div>
       </div>
 
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ================= OUR DEPARTMENTS ================= -->
+<section class="py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+
+    <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">
+      Our Departments
+    </h2>
+
+    <p class="text-center text-dark mb-5">
+      Explore the academic departments nurturing knowledge and innovation at Shri Chhatrapati Shivaji Mahavidyalaya.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Department 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_science.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Science Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Science Department</h5>
+            <p class="card-text small text-muted">
+              B.Sc and M.Sc programs with modern labs and research facilities.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_commerce.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Commerce Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Commerce Department</h5>
+            <p class="card-text small text-muted">
+              B.Com and M.Com programs with focus on business, finance, and commerce skills.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_arts.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Arts Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Arts Department</h5>
+            <p class="card-text small text-muted">
+              Courses in humanities, social sciences, languages, and creative arts.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_it.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="IT Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">IT & Computer Science</h5>
+            <p class="card-text small text-muted">
+              Cutting-edge labs, programming courses, and IT management programs.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_science.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Law Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Law Department</h5>
+            <p class="card-text small text-muted">
+              Providing quality legal education and practical training for aspiring lawyers.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 dept-card text-center">
+          <img src="photos/department_science.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Law Department">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Law Department</h5>
+            <p class="card-text small text-muted">
+              Providing quality legal education and practical training for aspiring lawyers.
+            </p>
+            <a href="#" class="btn readmore-btn mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- galary -->
+
+<!-- ================= GALLERY SECTION ================= -->
+<section class="py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+
+    <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">
+      Our Gallery
+    </h2>
+
+    <p class="text-center text-dark mb-5">
+      Explore moments from events, seminars, sports, and campus life at Shri Chhatrapati Shivaji Mahavidyalaya.
+    </p>
+
+    <div class="row g-3">
+
+      <!-- Gallery Item 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/1.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/1.JPG" class="card-img-top" alt="Gallery Image 1" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/2.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/2.JPG" class="card-img-top" alt="Gallery Image 2" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/3.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/3.JPG" class="card-img-top" alt="Gallery Image 3" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/4.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/4.JPG" class="card-img-top" alt="Gallery Image 4" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/4.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/4.JPG" class="card-img-top" alt="Gallery Image 4" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/4.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/4.JPG" class="card-img-top" alt="Gallery Image 4" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/4.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/4.JPG" class="card-img-top" alt="Gallery Image 4" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="photos/4.JPG" class="glightbox" data-gallery="gallery1">
+          <div class="card border-0 shadow-sm">
+            <img src="photos/4.JPG" class="card-img-top" alt="Gallery Image 4" style="height:200px; object-fit:cover;">
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-2">
+            <a href="#" class="btn readmore-btn">Read More</a>
+      </div>
+
+
+
+      <!-- Add more images as needed -->
     </div>
 
   </div>
@@ -508,6 +723,13 @@
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -561,8 +783,3 @@ closeBtn.addEventListener('click', () => {
 
 </body>
 </html>
-
-
-
-
-
