@@ -91,11 +91,15 @@
     margin-right:0;
 }
 
-@media(min-width:992px){
-    .navbar .navbar-collapse{
-        justify-content:center;
-    }
+.admition_btn{
+    //border: 1px solid white;
 }
+
+.admition_btn:hover{
+    border: 1px solid white;
+}
+
+
 
 .sticky-nav{
     position:fixed;
@@ -188,13 +192,15 @@
     transform: translateY(-5px);
 }
 
-.btn-primary-custom {
+
+
+.readmore-btn{
+    width: 100%;
     background-color: var(--primary-color);
-    color: #fff;
-    border: none;
+    color: white;
 }
 
-.btn-primary-custom:hover {
+.readmore-btn:hover {
     background-color: #7a1705;
     color: #fff;
 }
@@ -205,7 +211,7 @@
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:992px){
+@media(max-width:1200px){
 
     .carousel-item img{
         object-fit:contain;
@@ -256,7 +262,7 @@
 </div>
 
 <!-- NAVBAR -->
-<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-md">
   <div class="container d-flex align-items-center">
 
     <button id="navbarToggle" class="navbar-toggler custom-toggler me-2"
@@ -274,6 +280,27 @@
                     <li><a class="dropdown-item" href="#">Management</a></li>
                 </ul>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Management</a></li>
+                </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Admission</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
@@ -282,7 +309,7 @@
         </ul>
     </div>
 
-    <a href="#" class="btn text-white fw-bold px-3 ms-auto">
+    <a href="#" class="btn admition_btn text-white fw-bold px-3 ms-auto">
         Online Admission
     </a>
 
@@ -363,7 +390,7 @@
             <p class="small">
               Leading the institution with dedication and commitment towards academic excellence.
             </p>
-            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+            <a href="#" class="btn readmore-btn px-4 mt-2">Read More</a>
           </div>
         </div>
       </div>
@@ -379,7 +406,7 @@
             <p class="small">
               Supporting academic administration and student development activities.
             </p>
-            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+            <a href="#" class="btn readmore-btn px-4 mt-2">Read More</a>
           </div>
         </div>
       </div>
@@ -395,7 +422,7 @@
             <p class="small">
               Providing strategic direction and strengthening institutional growth.
             </p>
-            <a href="#" class="btn btn-primary-custom px-4 mt-2">Read More</a>
+            <a href="#" class="btn readmore-btn px-4 mt-2">Read More</a>
           </div>
         </div>
       </div>
@@ -495,9 +522,15 @@ window.addEventListener("scroll", function(){
     }
 });
 
+// loader
+
 window.addEventListener("load", function(){
     document.getElementById("loader").style.display = "none";
 });
+
+
+
+//tauggle btn
 
 const toggleBtn = document.getElementById('navbarToggle');
 const closeBtn = document.getElementById('closeBtn');
@@ -514,13 +547,13 @@ closeBtn.addEventListener('click', () => {
     menu.classList.remove('show');
 });
 
-window.addEventListener('resize', function () {
-    if (window.innerWidth >= 992) {
-        toggleBtn.classList.remove('d-none');
-        closeBtn.classList.add('d-none');
-        menu.classList.remove('show');
-    }
-});
+// window.addEventListener('resize', function () {
+//     if (window.innerWidth >= 992) {
+//         toggleBtn.classList.remove('d-none');
+//         closeBtn.classList.add('d-none');
+//         menu.classList.remove('show');
+//     }
+// });
 </script>
 
 </body>
