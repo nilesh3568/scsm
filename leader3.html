@@ -14,6 +14,8 @@
 <!-- Font Awesome (Required for Footer Icons) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <style>
 
     html, body {
@@ -256,12 +258,12 @@
 <section class="py-5" style="background-color:#f9f9f9;">
   <div class="container">
 
-    <h1 class="text-center fw-bold mb-2" style="color: var(--primary-color);">Mrs. Anuradha (Tai) Nagawade</h1>
-    <p class="text-center fw-bold mb-5" style="color: var(--primary-color);">Secretary, Shri Chhatrapati Shivaji Mahavidyalaya, Shrigonda</p>
+    <h1 class="text-center fw-bold mb-2" data-aos="fade-up" data-aos-delay="300" style="color: var(--primary-color);">Mrs. Anuradha (Tai) Nagawade</h1>
+    <p class="text-center fw-bold mb-5" data-aos="fade-up" data-aos-delay="300" style="color: var(--primary-color);">Secretary, Shri Chhatrapati Shivaji Mahavidyalaya, Shrigonda</p>
 
 
     <!-- Leader Main Card -->
-    <div class="card shadow-lg border-0 mb-5">
+    <div class="card shadow-lg border-0 mb-5" data-aos="fade-up" data-aos-delay="300">
       <div class="row g-0 align-items-center">
         
         <!-- Photo Column -->
@@ -300,14 +302,14 @@
     <!-- Vision & Leadership Cards -->
     <div class="row g-4 mb-4">
       <div class="col-md-6">
-        <div class="card h-100 shadow-sm border-0">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="300">
           <div class="card-body">
             <h5 class="card-title text-danger fw-bold">Inspiring Vision</h5>
             <p class="card-text">Driving educational excellence with a focus on ethical values, personal growth, and community service.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
             <h5 class="card-title text-danger fw-bold">Leadership Approach</h5>
@@ -318,29 +320,29 @@
     </div>
 
     <!-- Inspirational Message Card -->
-    <div class="card shadow-sm border-0 text-center p-4 mb-4">
+    <div class="card shadow-sm border-0 text-center p-4 mb-4" data-aos="fade-up" data-aos-delay="300">
       <p class="mb-0 fw-bold fst-italic text-dark">
         "True education is not just about knowledge, but about nurturing values that build a just and compassionate society."
       </p>
     </div>
 
     <!-- Key Initiatives Cards -->
-    <h4 class="fw-bold text-danger text-center mb-3">Key Initiatives Under Her Leadership</h4>
+    <h4 class="fw-bold text-danger text-center mb-3" data-aos="fade-up" data-aos-delay="300">Key Initiatives Under Her Leadership</h4>
     <div class="row g-4 mb-5">
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3" data-aos="fade-up" data-aos-delay="300">
           <h6 class="fw-bold text-danger">Public Service and Achievements</h6>
           <p>Promoting community engagement, student volunteering, and academic excellence.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3" data-aos="fade-up" data-aos-delay="300">
           <h6 class="fw-bold text-danger">Political Leadership</h6>
           <p>Guiding policy decisions that enhance education and social development in the region.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3" data-aos="fade-up" data-aos-delay="300">
           <h6 class="fw-bold text-danger">Social Welfare</h6>
           <p>Championing initiatives to improve healthcare, women empowerment, and rural development.</p>
         </div>
@@ -348,7 +350,7 @@
     </div>
 
     <!-- Buttons -->
-    <a href="index.html" class="btn readmore-btn1 px-4 mt-2">Home</a>
+    <a href="leader1.html" class="btn readmore-btn1 px-4 mt-2" data-aos="fade-up" data-aos-delay="300">Home</a>
 
   </div>
 </section>
@@ -484,6 +486,14 @@ closeBtn.addEventListener('click', () => {
 // });
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-in-out',
+  });
+</script>
+
 </body>
 </html>
-
